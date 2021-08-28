@@ -6,9 +6,13 @@ if (!process.env.PORT) {
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
+//Logger lets us keep track of logs instead of manually creating them
 const logger = require('morgan');
+//This parses cookies so we can get data from cookies
 const cookieParser = require('cookie-parser');
+//parses body so we can read body info
 const bodyParser = require('body-parser');
+//this can ovveride the req.method property with a new value
 const methodOverride = require('method-override')
 
 const app = express();
